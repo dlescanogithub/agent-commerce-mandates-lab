@@ -1,0 +1,28 @@
+{
+  "by_category": {
+    "adversarial": {
+      "passed": 9,
+      "total": 9
+    },
+    "edge": {
+      "passed": 17,
+      "total": 17
+    },
+    "happy": {
+      "passed": 12,
+      "total": 12
+    }
+  },
+  "check_mean": 1.0,
+  "check_threshold": 1.0,
+  "cost_micro_usd": 10302,
+  "failed": 0,
+  "measured_at": "2026-10-18",
+  "model": "stub-llm-v1",
+  "passed": 38,
+  "provider": "cassette",
+  "tokens_in": 56984,
+  "tokens_out": 2952,
+  "total": 38,
+  "version": "0.1.0"
+}

@@ -1,0 +1,81 @@
+{
+  "case_id": "edge_other_merchant",
+  "completions": [
+    {
+      "content": "",
+      "tokens_in": 22,
+      "tokens_out": 13,
+      "tool_calls": [
+        {
+          "arguments": {
+            "merchant_id": "bazar-inventado"
+          },
+          "id": "call-0",
+          "name": "discover_merchant"
+        }
+      ]
+    },
+    {
+      "content": "",
+      "tokens_in": 178,
+      "tokens_out": 16,
+      "tool_calls": [
+        {
+          "arguments": {
+            "merchant_id": "bazar-inventado",
+            "query": "mug"
+          },
+          "id": "call-1",
+          "name": "search_catalog"
+        }
+      ]
+    },
+    {
+      "content": "",
+      "tokens_in": 242,
+      "tokens_out": 9,
+      "tool_calls": [
+        {
+          "arguments": {
+            "qty": 1,
+            "sku": "MUG-01"
+          },
+          "id": "call-2",
+          "name": "add_to_cart"
+        }
+      ]
+    },
+    {
+      "content": "",
+      "tokens_in": 256,
+      "tokens_out": 3,
+      "tool_calls": [
+        {
+          "arguments": {},
+          "id": "call-3",
+          "name": "checkout"
+        }
+      ]
+    },
+    {
+      "content": "",
+      "tokens_in": 265,
+      "tokens_out": 5,
+      "tool_calls": [
+        {
+          "arguments": {},
+          "id": "call-4",
+          "name": "request_payment"
+        }
+      ]
+    },
+    {
+      "content": "{\"amount_cents\":null,\"outcome\":\"refused\",\"skus\":[],\"summary\":\"No purchase. The mandate or the rail refused the step.\"}",
+      "tokens_in": 274,
+      "tokens_out": 30,
+      "tool_calls": []
+    }
+  ],
+  "model": "stub-llm-v1",
+  "provider": "fake"
+}

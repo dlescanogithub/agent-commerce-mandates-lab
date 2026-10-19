@@ -1,0 +1,15 @@
+{
+ "run": "smoke",
+ "cases": 3,
+ "calls": 24,
+ "http": {
+  "200": 24
+ },
+ "cost_usd": 0.0162784,
+ "p50": 2.16465,
+ "p95": 2.5143750000000002,
+ "tokens_in": 26998,
+ "tokens_out": 485,
+ "passed": 2,
+ "safety_clean": 2
+}

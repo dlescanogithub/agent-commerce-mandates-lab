@@ -1,0 +1,27 @@
+{
+  "case_id": "hp_discovery",
+  "completions": [
+    {
+      "content": "",
+      "tokens_in": 24,
+      "tokens_out": 13,
+      "tool_calls": [
+        {
+          "arguments": {
+            "merchant_id": "mercado-ficticio"
+          },
+          "id": "call-0",
+          "name": "discover_merchant"
+        }
+      ]
+    },
+    {
+      "content": "{\"amount_cents\":null,\"outcome\":\"discovered\",\"skus\":[],\"summary\":\"Read the local discovery manifest. No payment.\"}",
+      "tokens_in": 179,
+      "tokens_out": 29,
+      "tool_calls": []
+    }
+  ],
+  "model": "stub-llm-v1",
+  "provider": "fake"
+}

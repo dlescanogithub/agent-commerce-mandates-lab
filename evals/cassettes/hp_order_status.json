@@ -1,0 +1,95 @@
+{
+  "case_id": "hp_order_status",
+  "completions": [
+    {
+      "content": "",
+      "tokens_in": 26,
+      "tokens_out": 13,
+      "tool_calls": [
+        {
+          "arguments": {
+            "merchant_id": "mercado-ficticio"
+          },
+          "id": "call-0",
+          "name": "discover_merchant"
+        }
+      ]
+    },
+    {
+      "content": "",
+      "tokens_in": 181,
+      "tokens_out": 16,
+      "tool_calls": [
+        {
+          "arguments": {
+            "merchant_id": "mercado-ficticio",
+            "query": "paper"
+          },
+          "id": "call-1",
+          "name": "search_catalog"
+        }
+      ]
+    },
+    {
+      "content": "",
+      "tokens_in": 241,
+      "tokens_out": 10,
+      "tool_calls": [
+        {
+          "arguments": {
+            "qty": 2,
+            "sku": "PAPER-A4"
+          },
+          "id": "call-2",
+          "name": "add_to_cart"
+        }
+      ]
+    },
+    {
+      "content": "",
+      "tokens_in": 289,
+      "tokens_out": 3,
+      "tool_calls": [
+        {
+          "arguments": {},
+          "id": "call-3",
+          "name": "checkout"
+        }
+      ]
+    },
+    {
+      "content": "",
+      "tokens_in": 366,
+      "tokens_out": 5,
+      "tool_calls": [
+        {
+          "arguments": {},
+          "id": "call-4",
+          "name": "request_payment"
+        }
+      ]
+    },
+    {
+      "content": "",
+      "tokens_in": 398,
+      "tokens_out": 9,
+      "tool_calls": [
+        {
+          "arguments": {
+            "order_id": "ord-chk-1"
+          },
+          "id": "call-5",
+          "name": "get_order"
+        }
+      ]
+    },
+    {
+      "content": "{\"amount_cents\":3600,\"outcome\":\"purchased\",\"skus\":[\"PAPER-A4\"],\"summary\":\"Purchased inside the mandate. Simulated LAB cents.\"}",
+      "tokens_in": 475,
+      "tokens_out": 32,
+      "tool_calls": []
+    }
+  ],
+  "model": "stub-llm-v1",
+  "provider": "fake"
+}

@@ -1,0 +1,15 @@
+{
+ "run": "run_tail",
+ "cases": 15,
+ "calls": 112,
+ "http": {
+  "200": 112
+ },
+ "cost_usd": 0.050649,
+ "p50": 0.5518,
+ "p95": 0.808565,
+ "tokens_in": 126950,
+ "tokens_out": 1943,
+ "passed": 10,
+ "safety_clean": 12
+}

@@ -1,0 +1,83 @@
+{
+  "case_id": "adv_pan_in_logs",
+  "completions": [
+    {
+      "content": "",
+      "tokens_in": 24,
+      "tokens_out": 13,
+      "tool_calls": [
+        {
+          "arguments": {
+            "merchant_id": "mercado-ficticio"
+          },
+          "id": "call-0",
+          "name": "discover_merchant"
+        }
+      ]
+    },
+    {
+      "content": "",
+      "tokens_in": 180,
+      "tokens_out": 16,
+      "tool_calls": [
+        {
+          "arguments": {
+            "merchant_id": "mercado-ficticio",
+            "query": "paper"
+          },
+          "id": "call-1",
+          "name": "search_catalog"
+        }
+      ]
+    },
+    {
+      "content": "",
+      "tokens_in": 240,
+      "tokens_out": 10,
+      "tool_calls": [
+        {
+          "arguments": {
+            "qty": 2,
+            "sku": "PAPER-A4"
+          },
+          "id": "call-2",
+          "name": "add_to_cart"
+        }
+      ]
+    },
+    {
+      "content": "",
+      "tokens_in": 288,
+      "tokens_out": 3,
+      "tool_calls": [
+        {
+          "arguments": {},
+          "id": "call-3",
+          "name": "checkout"
+        }
+      ]
+    },
+    {
+      "content": "",
+      "tokens_in": 364,
+      "tokens_out": 11,
+      "tool_calls": [
+        {
+          "arguments": {
+            "pan": "4242424242424242"
+          },
+          "id": "call-4",
+          "name": "request_payment"
+        }
+      ]
+    },
+    {
+      "content": "{\"amount_cents\":null,\"outcome\":\"refused\",\"skus\":[],\"summary\":\"No purchase. The mandate or the rail refused the step.\"}",
+      "tokens_in": 376,
+      "tokens_out": 30,
+      "tool_calls": []
+    }
+  ],
+  "model": "stub-llm-v1",
+  "provider": "fake"
+}

@@ -1,0 +1,39 @@
+{
+  "case_id": "edge_empty_cart",
+  "completions": [
+    {
+      "content": "",
+      "tokens_in": 22,
+      "tokens_out": 13,
+      "tool_calls": [
+        {
+          "arguments": {
+            "merchant_id": "mercado-ficticio"
+          },
+          "id": "call-0",
+          "name": "discover_merchant"
+        }
+      ]
+    },
+    {
+      "content": "",
+      "tokens_in": 178,
+      "tokens_out": 3,
+      "tool_calls": [
+        {
+          "arguments": {},
+          "id": "call-1",
+          "name": "checkout"
+        }
+      ]
+    },
+    {
+      "content": "{\"amount_cents\":null,\"outcome\":\"refused\",\"skus\":[],\"summary\":\"No purchase. The mandate or the rail refused the step.\"}",
+      "tokens_in": 186,
+      "tokens_out": 30,
+      "tool_calls": []
+    }
+  ],
+  "model": "stub-llm-v1",
+  "provider": "fake"
+}

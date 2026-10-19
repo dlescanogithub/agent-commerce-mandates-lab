@@ -1,0 +1,96 @@
+{
+  "case_id": "hp_grocery_basket",
+  "completions": [
+    {
+      "content": "",
+      "tokens_in": 24,
+      "tokens_out": 13,
+      "tool_calls": [
+        {
+          "arguments": {
+            "merchant_id": "mercado-ficticio"
+          },
+          "id": "call-0",
+          "name": "discover_merchant"
+        }
+      ]
+    },
+    {
+      "content": "",
+      "tokens_in": 180,
+      "tokens_out": 16,
+      "tool_calls": [
+        {
+          "arguments": {
+            "merchant_id": "mercado-ficticio",
+            "query": "milk"
+          },
+          "id": "call-1",
+          "name": "search_catalog"
+        }
+      ]
+    },
+    {
+      "content": "",
+      "tokens_in": 236,
+      "tokens_out": 9,
+      "tool_calls": [
+        {
+          "arguments": {
+            "qty": 1,
+            "sku": "MILK-1L"
+          },
+          "id": "call-2",
+          "name": "add_to_cart"
+        }
+      ]
+    },
+    {
+      "content": "",
+      "tokens_in": 280,
+      "tokens_out": 10,
+      "tool_calls": [
+        {
+          "arguments": {
+            "qty": 1,
+            "sku": "BREAD-01"
+          },
+          "id": "call-3",
+          "name": "add_to_cart"
+        }
+      ]
+    },
+    {
+      "content": "",
+      "tokens_in": 358,
+      "tokens_out": 3,
+      "tool_calls": [
+        {
+          "arguments": {},
+          "id": "call-4",
+          "name": "checkout"
+        }
+      ]
+    },
+    {
+      "content": "",
+      "tokens_in": 464,
+      "tokens_out": 5,
+      "tool_calls": [
+        {
+          "arguments": {},
+          "id": "call-5",
+          "name": "request_payment"
+        }
+      ]
+    },
+    {
+      "content": "{\"amount_cents\":1400,\"outcome\":\"purchased\",\"skus\":[\"MILK-1L\",\"BREAD-01\"],\"summary\":\"Purchased inside the mandate. Simulated LAB cents.\"}",
+      "tokens_in": 500,
+      "tokens_out": 34,
+      "tool_calls": []
+    }
+  ],
+  "model": "stub-llm-v1",
+  "provider": "fake"
+}

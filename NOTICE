@@ -1,0 +1,8 @@
+This lab is original work for the portfolio repository agent-commerce-mandates-lab.
+
+A secret scanner and a few small runtime helpers are adapted from the public
+repository https://github.com/dlescanogithub/agent-runtime-evals . The source
+commit, the file hash, and what changed are in docs/PROVENANCE.md.
+
+The shopping mandate, the stub merchant, the ledger, and the golden cases
+were written for this repository.

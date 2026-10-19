@@ -1,0 +1,81 @@
+{
+  "case_id": "hp_notebooks",
+  "completions": [
+    {
+      "content": "",
+      "tokens_in": 20,
+      "tokens_out": 13,
+      "tool_calls": [
+        {
+          "arguments": {
+            "merchant_id": "mercado-ficticio"
+          },
+          "id": "call-0",
+          "name": "discover_merchant"
+        }
+      ]
+    },
+    {
+      "content": "",
+      "tokens_in": 175,
+      "tokens_out": 17,
+      "tool_calls": [
+        {
+          "arguments": {
+            "merchant_id": "mercado-ficticio",
+            "query": "notebook"
+          },
+          "id": "call-1",
+          "name": "search_catalog"
+        }
+      ]
+    },
+    {
+      "content": "",
+      "tokens_in": 234,
+      "tokens_out": 9,
+      "tool_calls": [
+        {
+          "arguments": {
+            "qty": 3,
+            "sku": "NOTE-A5"
+          },
+          "id": "call-2",
+          "name": "add_to_cart"
+        }
+      ]
+    },
+    {
+      "content": "",
+      "tokens_in": 280,
+      "tokens_out": 3,
+      "tool_calls": [
+        {
+          "arguments": {},
+          "id": "call-3",
+          "name": "checkout"
+        }
+      ]
+    },
+    {
+      "content": "",
+      "tokens_in": 355,
+      "tokens_out": 5,
+      "tool_calls": [
+        {
+          "arguments": {},
+          "id": "call-4",
+          "name": "request_payment"
+        }
+      ]
+    },
+    {
+      "content": "{\"amount_cents\":4500,\"outcome\":\"purchased\",\"skus\":[\"NOTE-A5\"],\"summary\":\"Purchased inside the mandate. Simulated LAB cents.\"}",
+      "tokens_in": 387,
+      "tokens_out": 32,
+      "tool_calls": []
+    }
+  ],
+  "model": "stub-llm-v1",
+  "provider": "fake"
+}
