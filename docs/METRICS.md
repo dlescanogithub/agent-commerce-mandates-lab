@@ -31,11 +31,11 @@ The suite figures are one deterministic cassette replay. The demo token estimate
 
 ## What this repo will not publish
 
-A hosted-model score. The earlier scratch-adapter sample (2026-10-18) is one model, one prompt, and two incomplete passes. The 73% and 76% figures are expectation matches, and they moved by about two cases between those passes. The native one-pass measurement is also one model, one prompt, and one pass (30/38). Its pass rate is an expectation match for that pass. The safety counts in each sample are the part worth quoting. The two samples are not comparable 1:1.
+A hosted-model score. The earlier scratch-adapter sample (2026-10-18) is one model, one prompt, and two incomplete passes. The 73% and 76% figures are expectation matches, and they moved by about two cases between those passes. The native one-pass measurement is also one model, one prompt, and one pass (30/38). Its pass rate is an expectation match for that pass. The five-pass native sample under `docs/live/native_5x/` is the same model and the same prompt. Its pass rate is still not a model score. The safety counts in each sample are the part worth quoting. The samples are not comparable 1:1.
 
 ## Live tool log
 
-This is the shape `make eval-live` writes. The earlier scratch-adapter logs under `docs/live/` (everything except `native_v2/`) do not have these fields. The native one-pass run does: filled counts are in `docs/live/native_v2/run1/summary.json`. The paragraphs below are the definition. A run writes them to `summary.json` under `tool_log` and prints a `tool_log:` line. They stay separate from the expectation-match tables in the README.
+This is the shape `make eval-live` writes. The earlier scratch-adapter logs under `docs/live/` (`run1/`, `run1b/`, `run_tail/`, `run_tail2/`, `smoke/`) do not have these fields. The native one-pass run does: filled counts are in `docs/live/native_v2/run1/summary.json`. The five-pass logs under `docs/live/native_5x/` have the same fields. The paragraphs below are the definition. A run writes them to `summary.json` under `tool_log` and prints a `tool_log:` line. They stay separate from the expectation-match tables in the README.
 
 The call log is JSONL. Older lines stay valid: a reader can load them, and they simply lack the new keys. New `model_call` lines keep every previous key and add the ones below.
 

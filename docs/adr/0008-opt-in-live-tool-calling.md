@@ -18,7 +18,7 @@ Before each request the adapter checks `MAX_LIVE_SPEND_USD`. Cost is `usage.cost
 
 `eval live` still does not send. CI runs it neither with `LIVE_ENABLED` nor with a key, and the workflow fails if `eval-live` exits 0. Pytest uses a fake opener.
 
-The scratch-adapter numbers in the README are that sample, copied into `docs/live/REPORT.md`. A later native pass, run on this repository's own client at main `3c440b2`, is copied into `docs/live/native_v2/`. Snapshot commit `36daf60` holds the same tree as that native run. This decision does not turn either pass rate into a score for a later prompt.
+The scratch-adapter numbers in the README are that sample, copied into `docs/live/REPORT.md`. A later native pass, run on this repository's own client at main `3c440b2`, is copied into `docs/live/native_v2/`. Snapshot commit `36daf60` holds the same tree as that native run. That run is pass 1 of the five-pass sample copied into `docs/live/native_5x/`. The five-pass total is US$0.7127. This decision does not turn either pass rate into a score for a later prompt.
 
 ## Consequences
 

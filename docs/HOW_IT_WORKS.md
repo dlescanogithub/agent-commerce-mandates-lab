@@ -48,7 +48,7 @@ No es una tarjeta de verdad. Es la imagen para explicar el mandato.
 | `runner.py` | El loop. Una vuelta, una tool | No firma con una clave de producción |
 | `providers/fake.py` | El stub. Sigue un script con nombre | No lee la descripción como si fuera una orden |
 | `providers/cassette.py` | Repite el turno grabado | No decide nada nuevo |
-| `providers/live.py` | Arma el POST con las tools del repo, el tope de gasto y un log por llamada | `eval live` no manda. `eval-live` manda solo si `LIVE_ENABLED=1`. Hay dos registros del 2026-10-18: la pasada nativa en `docs/live/native_v2/` y la muestra anterior del adaptador suelto en `docs/live/REPORT.md`. No se mezclan. CI no las corre |
+| `providers/live.py` | Arma el POST con las tools del repo, el tope de gasto y un log por llamada | `eval live` no manda. `eval-live` manda solo si `LIVE_ENABLED=1`. La muestra nativa actual son cinco pasadas en `docs/live/native_5x/` (informe fechado 2026-10-19; la pasada 1 es la de 2026-10-18 en `docs/live/native_v2/`). La muestra anterior del adaptador suelto está en `docs/live/REPORT.md`. No se mezclan. CI no las corre |
 | `mandate.py` | Firma y verifica. Si falla, el cap efectivo es cero | No es una verifiable credential |
 | `tools.py` | Revisa el mandato otra vez en el momento de pagar | No tiene una tool `approve` |
 | `merchant.py` | Catálogo, carrito, checkout, pago falso, reembolso | No es una red de pagos |
@@ -125,7 +125,7 @@ Fijate que el stub a veces obedece el ataque a propósito. Así el cassette mues
 
 - No es una implementación conforme de AP2 ni de UCP. Está inspirado en las páginas públicas citadas en el README. La firma es HMAC, no una credencial verificable.
 - No hay red de pagos, ni billetera, ni KYC, ni contracargos, ni tipo de cambio.
-- Hay dos registros con xAI del 2026-10-18. La pasada nativa (una sola, 38 casos, cliente del repo, main `3c440b2`) está en `docs/live/native_v2/`. La muestra anterior del adaptador suelto está en `docs/live/REPORT.md`: no fueron tres pasadas completas, fueron dos de 37 casos, y el 73% y el 76% no son un puntaje del modelo. Los ceros de seguridad son lo sólido en las dos. No son comparables 1:1. CI sigue sin llamar a la red.
+- La muestra nativa actual son cinco pasadas con el cliente del repo, total US$0.7127, en `docs/live/native_5x/`. La pasada 1 es la ya copiada en `docs/live/native_v2/` (una sola, main `3c440b2`). La muestra anterior del adaptador suelto está en `docs/live/REPORT.md`: no fueron tres pasadas completas, fueron dos de 37 casos, y el 73% y el 76% no son un puntaje del modelo. Los números nativos y los del adaptador suelto no se mezclan. CI sigue sin llamar a la red.
 - El reloj está clavado. En un sistema de verdad usarías el reloj del sistema.
 - La confirmación humana de la demo es un arnés. No es un login de una persona.
 - Un número sin "medido" en este texto es [EST] o directamente no es un dato.

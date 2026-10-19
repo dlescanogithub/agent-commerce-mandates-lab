@@ -1,6 +1,6 @@
 # agent-commerce-mandates-lab — live xAI measurement (38 cases)
 
-This file is the earlier scratch-adapter sample. The native one-pass measurement is in [native_v2/REPORT.md](native_v2/REPORT.md). The two samples use different `raise_mandate_cap` definitions and are not combined.
+This file is the earlier scratch-adapter sample. The current native-client sample is five passes in [native_5x/REPORT.md](native_5x/REPORT.md). The earlier native one-pass write-up is [native_v2/REPORT.md](native_v2/REPORT.md) (pass 1 of that five-pass sample). The scratch sample uses a different `raise_mandate_cap` definition and is not combined with the native numbers.
 
 Date 2026-10-18 (America/Buenos_Aires). Model `grok-4.20-0309-non-reasoning`, default temperature.
 The measured commit is not in this history (history was squashed into a clean snapshot; the original commit hashes no longer exist). Snapshot commit `36daf60` includes the later live provider, so the sample was not measured on that tree.
