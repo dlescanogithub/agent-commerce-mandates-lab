@@ -10,7 +10,7 @@ A lab that calls a hosted model in CI spends money and goes red when the model c
 
 ## Decision
 
-`LLM_PROVIDER` defaults to `fake`. The stub follows a named script. Some scripts do the wrong thing on purpose so the tools can refuse them. Cassettes freeze those turns. `python -m agent_commerce.evalkit live` does not send. A hosted pass is a different command, `eval-live`, and it sends only when `LIVE_ENABLED=1`. CI does not set that. One xAI sample from 2026-10-18 is recorded in `docs/live/` and is not the CI gate. See ADR 0008.
+`LLM_PROVIDER` defaults to `fake`. The stub follows a named script. Some scripts do the wrong thing on purpose so the tools can refuse them. Cassettes freeze those turns. `python -m agent_commerce.evalkit live` does not send. A hosted pass is a different command, `eval-live`, and it sends only when `LIVE_ENABLED=1`. CI does not set that. Two xAI records from 2026-10-18 are in `docs/live/`: the earlier scratch-adapter sample (`REPORT.md`) and the native one-pass measurement (`native_v2/`). Neither is the CI gate. See ADR 0008.
 
 ## Consequences
 

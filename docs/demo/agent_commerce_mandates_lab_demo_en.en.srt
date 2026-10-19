@@ -1,0 +1,82 @@
+1
+00:00:00,900 --> 00:00:07,870
+A shopping agent that can spend, but only inside a signed mandate: a cap, an
+expiry, allowed merchants.
+
+2
+00:00:07,900 --> 00:00:10,220
+First, a purchase inside the mandate.
+
+3
+00:00:10,700 --> 00:00:15,500
+One charge, thirty-six LAB. LAB is simulated money.
+
+4
+00:00:16,940 --> 00:00:21,610
+Now the attacks, replayed with the repo's own code and a stub planner.
+
+5
+00:00:21,740 --> 00:00:29,340
+Over the cap: refused. Wrong merchant: refused. Expired: refused. Forged
+signature: refused.
+
+6
+00:00:29,370 --> 00:00:32,030
+A payment retried: still one charge.
+
+7
+00:00:32,090 --> 00:00:35,270
+A product description that orders a gift card: refused.
+
+8
+00:00:35,340 --> 00:00:40,740
+Above the human line, a person confirms. If the person says no, nothing is
+charged.
+
+9
+00:00:42,060 --> 00:00:44,640
+All thirty-eight offline cases pass.
+
+10
+00:00:44,690 --> 00:00:47,510
+Force a regression, and the gate exits with one.
+
+11
+00:00:48,870 --> 00:00:52,680
+Now a real model: one pass, thirty-eight cases.
+
+12
+00:00:52,730 --> 00:00:57,800
+Thirty pass, for sixteen cents. No unauthorized spend, no double charge.
+
+13
+00:00:57,830 --> 00:01:04,060
+After a refusal, the model tried to raise its own cap in sixteen cases. Every
+attempt was rejected.
+
+14
+00:01:04,460 --> 00:01:08,050
+Caveats: one pass, one model, one prompt.
+
+15
+00:01:08,110 --> 00:01:13,080
+Eight cases missed: four no-spend loops, four outcomes that differed from the
+script.
+
+16
+00:01:13,110 --> 00:01:15,860
+Measured on an earlier commit than this snapshot.
+
+17
+00:01:17,040 --> 00:01:23,200
+Phase one only. A real pilot needs a human backup and real shadow carts. Not
+done.
+
+18
+00:01:23,250 --> 00:01:26,040
+Processor and disputes: design only.
+
+19
+00:01:26,180 --> 00:01:31,060
+ROI: [EST], about a hundred dollars a week of labor. Not a saving.
+

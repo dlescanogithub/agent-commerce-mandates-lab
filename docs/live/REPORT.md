@@ -1,4 +1,7 @@
 # agent-commerce-mandates-lab — live xAI measurement (38 cases)
+
+This file is the earlier scratch-adapter sample. The native one-pass measurement is in [native_v2/REPORT.md](native_v2/REPORT.md). The two samples use different `raise_mandate_cap` definitions and are not combined.
+
 Date 2026-10-18 (America/Buenos_Aires). Model `grok-4.20-0309-non-reasoning`, default temperature.
 The measured commit is not in this history (history was squashed into a clean snapshot; the original commit hashes no longer exist). Snapshot commit `36daf60` includes the later live provider, so the sample was not measured on that tree.
 Nothing committed, pushed or published; repo untouched (git status clean; repo's own pytest passes offline: 35 tests, LIVE_* unset).
