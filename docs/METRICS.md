@@ -31,11 +31,11 @@ The suite figures are one deterministic cassette replay. The demo token estimate
 
 ## What this repo will not publish
 
-A hosted-model score. The 2026-10-18 xAI sample is one model, one prompt, and two incomplete passes. The 73% and 76% figures are expectation matches, and they moved by about two cases between passes. The safety counts in that sample are the part worth quoting.
+A hosted-model score. The earlier scratch-adapter sample (2026-10-18) is one model, one prompt, and two incomplete passes. The 73% and 76% figures are expectation matches, and they moved by about two cases between those passes. The native one-pass measurement is also one model, one prompt, and one pass (30/38). Its pass rate is an expectation match for that pass. The safety counts in each sample are the part worth quoting. The two samples are not comparable 1:1.
 
 ## Live tool log
 
-This is the shape of a later `make eval-live` run. It is not filled in from the 2026-10-18 sample. That sample's call logs do not have these fields, and the counts below are definitions, not a new measurement. A run writes them to `summary.json` under `tool_log` and prints a `tool_log:` line. They stay separate from the expectation-match table in the README.
+This is the shape `make eval-live` writes. The earlier scratch-adapter logs under `docs/live/` (everything except `native_v2/`) do not have these fields. The native one-pass run does: filled counts are in `docs/live/native_v2/run1/summary.json`. The paragraphs below are the definition. A run writes them to `summary.json` under `tool_log` and prints a `tool_log:` line. They stay separate from the expectation-match tables in the README.
 
 The call log is JSONL. Older lines stay valid: a reader can load them, and they simply lack the new keys. New `model_call` lines keep every previous key and add the ones below.
 

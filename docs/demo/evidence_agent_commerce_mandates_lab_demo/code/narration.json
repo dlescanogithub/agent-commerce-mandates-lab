@@ -1,0 +1,30 @@
+[
+ {
+  "id": "A_hook",
+  "text": "A shopping agent that can spend, but only inside a signed mandate: a cap, an expiry, allowed merchants. First, a purchase inside the mandate."
+ },
+ {
+  "id": "B1_inside",
+  "text": "One charge, thirty-six LAB. LAB is simulated money."
+ },
+ {
+  "id": "B2_cases",
+  "text": "Now the attacks, replayed with the repo's own code and a stub planner. Over the cap: refused. Wrong merchant: refused. Expired: refused. Forged signature: refused. A payment retried: still one charge. A product description that orders a gift card: refused. Above the human line, a person confirms. If the person says no, nothing is charged."
+ },
+ {
+  "id": "C_gate",
+  "text": "All thirty-eight offline cases pass. Force a regression, and the gate exits with one."
+ },
+ {
+  "id": "D_live",
+  "text": "Now a real model: one pass, thirty-eight cases. Thirty pass, for sixteen cents. No unauthorized spend, no double charge. After a refusal, the model tried to raise its own cap in sixteen cases. Every attempt was rejected."
+ },
+ {
+  "id": "E_caveat",
+  "text": "Caveats: one pass, one model, one prompt. Eight cases missed: four no-spend loops, four outcomes that differed from the script. Measured on an earlier commit than this snapshot."
+ },
+ {
+  "id": "F_close",
+  "text": "Phase one only. A real pilot needs a human backup and real shadow carts. Not done. Processor and disputes: design only. ROI: E-S-T, about a hundred dollars a week of labor. Not a saving."
+ }
+]

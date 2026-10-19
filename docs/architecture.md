@@ -9,7 +9,7 @@ flowchart LR
   runner --> model["Planner"]
   model --> fake["Fake planner, default"]
   model --> cassette["Cassette replay, CI"]
-  model --> live["HTTP adapter, off in CI; sample in docs/live"]
+  model --> live["HTTP adapter, off in CI; samples in docs/live"]
   runner --> tools["Tools"]
   tools --> mandate["HMAC mandate, fail closed"]
   tools --> merchant["Catalog, cart, checkout"]
