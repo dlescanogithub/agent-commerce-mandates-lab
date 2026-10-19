@@ -6,7 +6,7 @@ Accepted.
 
 ## Context
 
-The cassette suite proves the controls against a stub planner. It does not show what a hosted model does when it can call the same tools. A measured pass on 2026-10-18 needed tool schemas. The provider in main `d6cb6ff` did not send them, so that sample used a scratch adapter outside the repo.
+The cassette suite proves the controls against a stub planner. It does not show what a hosted model does when it can call the same tools. A measured pass on 2026-10-18 needed tool schemas. The provider at measurement time did not send them, so that sample used a scratch adapter outside the repo. That commit hash no longer exists. Snapshot commit `36daf60` includes the later provider, which does send schemas; the sample was not measured on that tree.
 
 ## Decision
 
