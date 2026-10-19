@@ -119,7 +119,7 @@ Two records from 2026-10-18, model `grok-4.20-0309-non-reasoning`, default tempe
 
 #### Native measurement, one full pass (main 3c440b2)
 
-Diego's operator ran this repository's own client (`python -m agent_commerce.evalkit eval-live`, `LIVE_ENABLED=1`, cap US$0.20) at main `3c440b2`. Snapshot commit `36daf60` holds the same tree. Prompt and tool schemas are the repo's. Logs: [docs/live/native_v2/REPORT.md](docs/live/native_v2/REPORT.md) and [docs/live/native_v2/run1/summary.json](docs/live/native_v2/run1/summary.json). Every figure in this subsection is from those two files.
+This measurement was run with this repository's own client (`python -m agent_commerce.evalkit eval-live`, `LIVE_ENABLED=1`, cap US$0.20) at main `3c440b2`. Snapshot commit `36daf60` holds the same tree. Prompt and tool schemas are the repo's. Logs: [docs/live/native_v2/REPORT.md](docs/live/native_v2/REPORT.md) and [docs/live/native_v2/run1/summary.json](docs/live/native_v2/run1/summary.json). Every figure in this subsection is from those two files.
 
 All 38 cases ran. **30/38** passed (the report also writes 79%). `summary.json` has `passed` 30 and `spent_micro_usd` 157849, which the report writes as **US$0.1578** (cap 0.20). **267** model calls, every HTTP status **200**, attempt 1, zero errors and zero retries. Tokens **326,818** in (**250,112** cached) / **4,727** out. LLM latency p50 **0.59 s**, p95 **2.52 s**, max 4.75 s.
 

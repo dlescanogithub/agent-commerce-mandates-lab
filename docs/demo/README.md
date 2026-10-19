@@ -21,7 +21,7 @@ The terminal text is the take under [evidence_agent_commerce_mandates_lab_demo/t
 
 [evidence_agent_commerce_mandates_lab_demo/number_trace.md](evidence_agent_commerce_mandates_lab_demo/number_trace.md) maps each number in the picture and in the narration to its source. The live numbers come from that native measurement: [docs/live/native_v2/REPORT.md](../live/native_v2/REPORT.md) and [docs/live/native_v2/run1/summary.json](../live/native_v2/run1/summary.json). They are not the earlier scratch-adapter sample in [docs/live/REPORT.md](../live/REPORT.md).
 
-Diego's operator ran that measurement on this repository's own client at main `3c440b2`. Snapshot commit `36daf60` holds the same tree. The take's `git log` line is `df07496`, and the script says "Measured on an earlier commit than this snapshot." `df07496` is a later commit on this branch (docs and CI files). The measured code tree is the `36daf60` tree.
+This measurement was run with this repository's own client at main `3c440b2`. Snapshot commit `36daf60` holds the same tree. The take's `git log` line is `df07496`, and the script says "Measured on an earlier commit than this snapshot." `df07496` is a later commit on this branch (docs and CI files). The measured code tree is the `36daf60` tree.
 
 Pass rate on that card is an expectation match for this one pass. It is not a model score.
 
