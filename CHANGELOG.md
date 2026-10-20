@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+## 0.1.1 - 2026-10-20
+
+- README: three-line TL;DR under the title.
 - Five native passes under `docs/live/native_5x/` (`REPORT.md`, `analysis.json`, and five pass directories). This measurement was run with this repository's own client. Five-pass total US$0.7127. Pass 1 is the 2026-10-18 run already written up under `docs/live/native_v2/`. Passes 2–5 are fresh on main `8858222`. The report is dated 2026-10-19. Not a model score. The scratch-adapter sample is unchanged.
 - Screen recording under `docs/demo/` (English narration, synthetic xAI TTS, English and Spanish subtitles) and the native one-pass measurement under `docs/live/native_v2/`. This measurement was run with this repository's own client at main `3c440b2` (snapshot commit `36daf60` holds the same tree): 30/38 passed, US$0.1578, 267 model calls. That one-pass log is pass 1 of the five-pass sample; its US$0.1578 is inside the US$0.7127 and is not a second bill. The earlier scratch-adapter sample stays in `docs/live/REPORT.md` (27/37 and 28/37, US$0.2842). The two `raise_mandate_cap` counts use different definitions.
 - Live call log records the tool names on each model call and, for each executed tool, `accepted` or `rejected` plus the rejection code. Arguments and result bodies are not fields. `summary.json` and the `eval-live` printout add `tool_log`: calls per tool, rejections per tool, and how many `raise_mandate_cap` names came after a prior rejection in the same case. The runner notifies the live provider with the tool name and the final ok/error only, because the model call is logged before the tool runs and the last tool of a case has no following request. The scratch-adapter sample from 2026-10-18 predates these fields. The native one-pass log has them.

@@ -1,5 +1,11 @@
 # agent-commerce-mandates-lab
 
+**TL;DR**
+
+- This lab tests a shopping agent under a signed spending mandate. The problem: an assistant can spend over a cap, at the wrong merchant, or twice on a retry.
+- Measured stub suite, version 0.1.0, model `stub-llm-v1`, 2026-10-18: **38/38** passed; invariant checker **1.00** (threshold **1.00**).
+- Run `make demo`, or read [docs/HOW_IT_WORKS.md](docs/HOW_IT_WORKS.md).
+
 **Lab with fake providers: this tests a shopping agent under a signed spending mandate, not a payment network and not a model.**
 
 CI replays a stub planner. It does not call a hosted model. A real capture, a real card, and a conformant AP2 or UCP stack are not in this repo. Prices are simulated `LAB` cents. Merchants are fictional (Mercado Ficticio, Bazar Inventado). The buyer in the write-up, Casa Faro, is fictional.
