@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+- README: a three-line Start here, a Business value section, and a Proof subsection. Proof records the 2026-10-22 pytest run: Python 3.12.3, pytest 9.1.1, 50 passed, line coverage 94.75% (2002 of 2113 statements). The same run's pytest-cov total was 92.26% with branches included.
+- docs/BUSINESS_VALUE.md: value-realization plan in English. Labor inputs are the existing [EST] figures (40 orders/week, 100 USD per week). The live row is the native five-pass sample: median 30/38, total US$0.7127. Integration costs in the ROI are [EST] and are not a quote.
+
 ## 0.1.1 - 2026-10-20
 
 - README: three-line TL;DR under the title.
