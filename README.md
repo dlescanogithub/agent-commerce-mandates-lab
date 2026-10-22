@@ -1,5 +1,11 @@
 # agent-commerce-mandates-lab
 
+**Start here**
+
+This lab shows capture refused when a signed spending mandate does not fit: over the cap, the wrong merchant, or a second charge on a retry. Stub gate: 38/38 on 2026-10-18. A five-pass live sample, median 30/38, is a separate measurement.
+Run `make demo` (loopback stub merchant, no API key).
+Screen recording of one stub run: [docs/demo/README.md](docs/demo/README.md).
+
 **TL;DR**
 
 - This lab tests a shopping agent under a signed spending mandate. The problem: an assistant can spend over a cap, at the wrong merchant, or twice on a retry.
@@ -220,6 +226,10 @@ FAIL regression_false_purchase adversarial check=0.90
 
 That text is from `.venv/bin/python -m agent_commerce.evalkit regression` on 2026-10-18, version 0.1.0. CI runs the same command and fails the job if it exits 0.
 
+### Proof
+
+**MEASURED** 2026-10-22. Python 3.12.3. pytest 9.1.1. Package 0.1.1. Command: `.venv/bin/python -m pytest --cov`. The addopts in `pyproject.toml` add `--cov=agent_commerce --cov-report=term-missing --cov-fail-under=80`. **50 passed.** Line coverage **94.75%** (2002 of 2113 statements; `percent_statements_covered` 94.7468054898249). The same run printed `Total coverage: 92.26%`. That total includes branches (`branch = true` in `pyproject.toml`). It is not the line figure. A repeat of the command on the same tree printed the same 50 passed and the same 92.26% total. The first of those runs also printed `CoverageWarning: Module agent_commerce was previously imported, but not measured`. The repeat did not. Statement counts stayed 2002 of 2113. `src/` and `tests/` are the tree at `53577b5`. This docs change does not edit them. Earlier live reports say 50 passed and do not record coverage or a Python version.
+
 ## Use cases, governance and business strategy
 
 Only the office-supply purchase and the household-grocery scenario run in this repo. The other rows are design sketches. They name no real client, employer, or project.
@@ -277,6 +287,16 @@ What this repository actually does:
 **Success metrics.** [docs/METRICS.md](docs/METRICS.md). Measured here on 2026-10-18, stub only: suite **38/38**, checker mean **1.00**. Completed-within-mandate, escalation rate, error rate, and cost per order on a real desk are defined and empty.
 
 **Deployment Strategist conversation.** Start with discovery, not a model. Who owns the spend policy, what the cap is, which merchants exist, and what a dispute looks like change the design ([docs/DISCOVERY.md](docs/DISCOVERY.md)). Then shadow: the agent may build carts and must not capture. Then the gate: capture only inside a verified mandate, and a person who is not the prompt author owns the approve button. CI tests this runtime against cassettes. It does not certify a model. The person who builds the agent does not keep the approve button.
+
+## Business value
+
+Casa Faro (fictional) still has a person on office-supply carts. The assistant may prepare the cart. Capture stays inside a signed mandate, and a person confirms above a line.
+The labor sketch is about **100 USD per week** [EST] on **40 orders/week** [EST]. It is an illustration. The control on capture is the part the measurements speak to.
+Native live sample, MEASURED, report dated 2026-10-19: five passes, median **30/38**, total **US$0.7127**. Unauthorized spend, double charge, capture without approval, injection obeyed, and secrets in the logs are zero in that sample.
+The pass rate is an expectation match for that sample. The total is the bill for that sample. It is not a cost per office order.
+Stub suite, MEASURED, 2026-10-18, package 0.1.0: **38/38**, checker mean **1.00**. One demo purchase was **273 micro-USD** on the SIMULATED stub price.
+On the repo's own labor inputs, the year-1 ROI in the doc stays negative once the [EST] integration cost is included. The arithmetic is written out there.
+Buyer, value levers, baseline versus target KPIs, the ROI model, the cost table, the measurement plan, risks, and what is MEASURED versus not: [docs/BUSINESS_VALUE.md](docs/BUSINESS_VALUE.md).
 
 ## Decisions
 
@@ -359,6 +379,7 @@ A hosted model is not used by CI and is not used by `eval live`. See [.env.examp
 | [docs/ADAPT_TO_A_REAL_CLIENT.md](docs/ADAPT_TO_A_REAL_CLIENT.md) | What to swap, what to keep |
 | [docs/HOW_IT_WORKS.md](docs/HOW_IT_WORKS.md) | Plain-language walkthrough, in Spanish |
 | [docs/BUSINESS_CASE.md](docs/BUSINESS_CASE.md) | Problem, ROI [EST] |
+| [docs/BUSINESS_VALUE.md](docs/BUSINESS_VALUE.md) | Value plan: levers, KPIs, ROI [EST], cost table |
 | [docs/DISCOVERY.md](docs/DISCOVERY.md) | Ten questions and how the answers change the design |
 | [docs/SCOPE.md](docs/SCOPE.md) | Phases, assumptions, exit criteria |
 | [docs/RISKS.md](docs/RISKS.md) | Risk matrix |
