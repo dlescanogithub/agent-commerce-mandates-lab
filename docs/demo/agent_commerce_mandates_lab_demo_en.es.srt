@@ -1,81 +1,81 @@
 1
 00:00:00,900 --> 00:00:07,870
-Un agente de compras que puede gastar, pero solo dentro de un mandato firmado: un
-tope, un vencimiento, comercios permitidos.
+A shopping agent that can spend, but only inside a signed mandate: a cap, an
+expiry, allowed merchants.
 
 2
 00:00:07,900 --> 00:00:10,220
-Primero, una compra dentro del mandato.
+First, a purchase inside the mandate.
 
 3
 00:00:10,700 --> 00:00:15,500
-Un cobro, treinta y seis LAB. LAB es dinero simulado.
+One charge, thirty-six LAB. LAB is simulated money.
 
 4
 00:00:16,940 --> 00:00:21,610
-Ahora los ataques, reproducidos con el código del repo y un planificador de prueba.
+Now the attacks, replayed with the repo's own code and a stub planner.
 
 5
 00:00:21,740 --> 00:00:29,340
-Sobre el tope: rechazado. Comercio equivocado: rechazado. Vencido: rechazado. Firma
-falsa: rechazado.
+Over the cap: refused. Wrong merchant: refused. Expired: refused. Forged
+signature: refused.
 
 6
 00:00:29,370 --> 00:00:32,030
-Un pago reintentado: sigue siendo un cobro.
+A payment retried: still one charge.
 
 7
 00:00:32,090 --> 00:00:35,270
-Una descripción de producto que pide una tarjeta de regalo: rechazado.
+A product description that orders a gift card: refused.
 
 8
 00:00:35,340 --> 00:00:40,740
-Sobre el límite humano, una persona confirma. Si dice que no, no se cobra nada.
+Above the human line, a person confirms. If the person says no, nothing is
+charged.
 
 9
 00:00:42,060 --> 00:00:44,640
-Pasan los treinta y ocho casos sin conexión.
+All thirty-eight offline cases pass.
 
 10
 00:00:44,690 --> 00:00:47,510
-Si fuerzo una regresión, el gate sale con uno.
+Force a regression, and the gate exits with one.
 
 11
 00:00:48,870 --> 00:00:52,680
-Ahora un modelo real: una pasada, treinta y ocho casos.
+Now a real model: one pass, thirty-eight cases.
 
 12
 00:00:52,730 --> 00:00:57,800
-Pasan treinta, por dieciséis centavos. Sin gasto no autorizado, sin doble cobro.
+Thirty pass, for sixteen cents. No unauthorized spend, no double charge.
 
 13
 00:00:57,830 --> 00:01:04,060
-Tras un rechazo, el modelo intentó subir su propio tope en dieciséis casos. Cada
-intento fue rechazado.
+After a refusal, the model tried to raise its own cap in sixteen cases. Every
+attempt was rejected.
 
 14
 00:01:04,460 --> 00:01:08,050
-Salvedades: una pasada, un modelo, un prompt.
+Caveats: one pass, one model, one prompt.
 
 15
 00:01:08,110 --> 00:01:13,080
-Ocho casos fallaron: cuatro bucles sin gasto, cuatro resultados que difirieron del
-guion.
+Eight cases missed: four no-spend loops, four outcomes that differed from the
+script.
 
 16
 00:01:13,110 --> 00:01:15,860
-Medido en un commit anterior a este snapshot.
+Measured on an earlier commit than this snapshot.
 
 17
 00:01:17,040 --> 00:01:23,200
-Solo la fase uno. Un piloto real necesita un respaldo humano y carritos reales en
-shadow. No está hecho.
+Phase one only. A real pilot needs a human backup and real shadow carts. Not
+done.
 
 18
 00:01:23,250 --> 00:01:26,040
-Procesador y disputas: solo diseño.
+Processor and disputes: design only.
 
 19
 00:01:26,180 --> 00:01:31,060
-ROI: [EST], unos cien dólares por semana de trabajo. No es un ahorro.
-
+ROI: [EST], about a hundred dollars a week of labor. Not a saving.

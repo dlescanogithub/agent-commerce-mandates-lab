@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- English only. `docs/HOW_IT_WORKS.md` is a walkthrough for engineers and buyers. The demo script is `docs/demo/final_script_agent_commerce_mandates_lab_demo_en.md` (English lines only). `docs/demo/agent_commerce_mandates_lab_demo_en.es.srt` is the English translation of the former Spanish captions, same cue times as the English track. The demo video binary was not edited.
+
 ## 0.1.2 - 2026-10-22
 
 - README: a three-line Start here, a Business value section, and a Proof subsection. Proof records the 2026-10-22 pytest run: Python 3.12.3, pytest 9.1.1, 50 passed, line coverage 94.75% (2002 of 2113 statements). The same run's pytest-cov total was 92.26% with branches included.

@@ -103,7 +103,7 @@ Pages read on 2026-10-18:
 
 ### Demo
 
-Screen recording of one real stub run of this code, with the native live numbers on the last card: [docs/demo/](docs/demo/README.md). Narration voice is synthetic (xAI TTS). Subtitles are English and Spanish. One pass, one model, one prompt. That card is the earlier one-pass archive under `docs/live/native_v2/`. The five-pass sample in the live section below is not on the card. [docs/demo/evidence_agent_commerce_mandates_lab_demo/number_trace.md](docs/demo/evidence_agent_commerce_mandates_lab_demo/number_trace.md) maps each number to its source.
+Screen recording of one real stub run of this code, with the native live numbers on the last card: [docs/demo/](docs/demo/README.md). Narration voice is synthetic (xAI TTS). Subtitle text files are English. The video binary still has the original Spanish soft track and was not edited. One pass, one model, one prompt. That card is the earlier one-pass archive under `docs/live/native_v2/`. The five-pass sample in the live section below is not on the card. [docs/demo/evidence_agent_commerce_mandates_lab_demo/number_trace.md](docs/demo/evidence_agent_commerce_mandates_lab_demo/number_trace.md) maps each number to its source.
 
 Measured by `.venv/bin/python -m agent_commerce.evalkit run` on 2026-10-18, package version 0.1.0, model `stub-llm-v1`, cassette replay. Source file: [evals/results/latest.json](evals/results/latest.json).
 
@@ -377,7 +377,7 @@ A hosted model is not used by CI and is not used by `eval live`. See [.env.examp
 | Doc | What it is for |
 |---|---|
 | [docs/ADAPT_TO_A_REAL_CLIENT.md](docs/ADAPT_TO_A_REAL_CLIENT.md) | What to swap, what to keep |
-| [docs/HOW_IT_WORKS.md](docs/HOW_IT_WORKS.md) | Plain-language walkthrough, in Spanish |
+| [docs/HOW_IT_WORKS.md](docs/HOW_IT_WORKS.md) | Plain-language walkthrough |
 | [docs/BUSINESS_CASE.md](docs/BUSINESS_CASE.md) | Problem, ROI [EST] |
 | [docs/BUSINESS_VALUE.md](docs/BUSINESS_VALUE.md) | Value plan: levers, KPIs, ROI [EST], cost table |
 | [docs/DISCOVERY.md](docs/DISCOVERY.md) | Ten questions and how the answers change the design |

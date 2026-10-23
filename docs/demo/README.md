@@ -1,8 +1,8 @@
 # Demo
 
-Screen recording: [agent_commerce_mandates_lab_demo_en.mp4](agent_commerce_mandates_lab_demo_en.mp4) (1 min 32 s, 1280×720). English narration. English subtitles are burned into the picture and also in [agent_commerce_mandates_lab_demo_en.en.srt](agent_commerce_mandates_lab_demo_en.en.srt). Spanish subtitles are a soft track in the file and in [agent_commerce_mandates_lab_demo_en.es.srt](agent_commerce_mandates_lab_demo_en.es.srt).
+Screen recording: [agent_commerce_mandates_lab_demo_en.mp4](agent_commerce_mandates_lab_demo_en.mp4) (1 min 32 s, 1280×720). English narration. English subtitles are burned into the picture and also in [agent_commerce_mandates_lab_demo_en.en.srt](agent_commerce_mandates_lab_demo_en.en.srt). [agent_commerce_mandates_lab_demo_en.es.srt](agent_commerce_mandates_lab_demo_en.es.srt) is the same English text: the former Spanish sidecar, translated, with the same cue times. The video binary still contains the original Spanish soft track and was not edited.
 
-The narration voice is synthetic (xAI TTS). The script that was spoken is [guion_final_usado_agent_commerce_mandates_lab_demo_en.md](guion_final_usado_agent_commerce_mandates_lab_demo_en.md). One pass, one model, one prompt.
+The narration voice is synthetic (xAI TTS). The script that was spoken is [final_script_agent_commerce_mandates_lab_demo_en.md](final_script_agent_commerce_mandates_lab_demo_en.md). One pass, one model, one prompt.
 
 ## What the video shows
 
